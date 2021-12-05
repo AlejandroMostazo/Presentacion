@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The NIC</title>
+        <!--enlace con la hoja de estilos-->
+        <link rel="stylesheet" href="./styles/styles.css">
+        <!--enlace con el favicon-->
+        <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+        <!--enlace con JavaScript-->
+        <script src="./javascript/javascript.js"></script>
+        <!--si la fuente es de google fonts y no la descargo, pongo aqui el enlace-->
+
+        <!--fount awesome-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="container">
+
+        <!--barra de navegacion-->
+            <nav class="topnav" id="myTopnav">
+                <a href="#container" class="active">Home</a>
+                <a href="#introduction">¿Qué es?</a>
+                <a href="#funcionamiento">Funcionamiento</a>
+                <a href="#tipos">Tipos</a>
+                <a href="#marcas">Marcas</a>                
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                 <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+
+            <div class="clear"></div>
+              
+        <!--flechita flotante -->
+            <a href="#container"><div class="flechita">
+               <i class="fa fa-arrow-up" aria-hidden="true"></i> 
+            </div></a>
+    <!--seccion hero la 1º section -->
+            <section id="hero">
+                <div id="logoh1" >
+                    <div id="logo"></div>
+                    <h1>TARJETA DE RED</h1>
+                    <div id="triangulo"></div>
+                </div>
+                <a href="#introduction" rel="noopener noreferrer"><p id="call_to_action">Empezar presentación</p></a>
+            </section>
+            <section id="introduction">
+                <img class="iconorj45" src="./images/ethernet.png" alt="">
+                <h1>¿Qué es y para qué sirve?</h1>
+                
+                <img id="tarjetaPCI" src="./images/acompañaintroduction.jpg" alt="Tarjeta de red en pci">
+                <ul>
+                    <li><p><b>La tarjeta de red o NIC</b> es un componente hardware que se conecta a la placa base mediante los Slots o ranuras de expansión.</p></li>
+                    <li><b><p>Sirve para:</p></b></li>
+                    <li><p>Realiza conexiones LAN</p></li>
+                    <li><p>Expandir el nº de puertos Ethernet</p></li>
+                    <li><p>Aumentar la velocidad de conexión (si tenemos 2 redes distintas)</p></li>
+                    <li><p>Compartir recuros</p></li>
+                </ul>
+                
+                <div class="icons desaparece" id="icointro">
+                    <i class="fa fa-sitemap" aria-hidden="true"></i>
+                    <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                    <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                    <i class="fa fa-print" aria-hidden="true"></i>
+                </div>
+
+                <!--flechas para avanzar y retroceder-->
+                <a href="#funcionamiento">
+                    <div id="avanza" class="flechita desaparece">
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i> 
+                 </div>
+                </a>
+
+                <a href="#hero">
+                    <div id="retrocede" class="flechita desaparece">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i> 
+                 </div>
+                </a>
+
+            </section>
+            <!--Seccion que divide la seccion en dos columnas, con float-->
+
+            <section id="funcionamiento">
+                <div class="division" id="izquierda"> 
+                    <div class="icons">
+                        <i class="fa fa-cogs" aria-hidden="true"></i>
+                    </div>
+                    <h1>¿Como funciona?</h1>
+                    <p>Su función es hacer de intermediario entre el conector y nuestro equipo con un dispositivo para conectarnos a internet.</p>
+                    <p>Para realizar recivir y enviar, utiliza una serie de protocolos como el IEEE 802 que permite enviar y recibir datos por la red, fragmentando y encapsulando la información de la forma correcta.</p>
+                    
+                </div>
+                <div class="division" id="derecha">
+                    <p id="texto">Dentro de una redcada tarjeta tiene a una IP que identifica a ese dispositivo dentro de la red, pero además cada una tienen una dirección MAC que se diferencia de la IP en que la IP es asociada de forma automática por el router y puede cambiar en cualquier momento, además de que fuera de la red LAN hay IPs iguales, mientras que la MAC identifica de forma única a cada dispositivo hardware en el mundo.</p>
+                    <img class="macip" src="./images/mac.jpg" alt="direccion mac">
+                  
+                    <img class="macip" id="mostar" src="./images/ip.jpg" alt="direccion mac" onmouseover="mostrar('texto')" onmouseout="ocultar('texto')">   
+                </div>
+                <div class="clear"></div>
+
+                <a href="#tipos">
+                    <div id="avanza" class="flechita desaparece">
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i> 
+                 </div>
+                </a>
+
+                <a href="#introduction">
+                    <div id="retrocede" class="flechita desaparece">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i> 
+                 </div>
+                </a>
+
+            </section>
+
+            <!--tipos 3º seccion tipos -->
+
+            <section id="tipos">
+                <h1>Tipos</h1>
+                <div class="icons desaparece" id="icotipo">
+                    <i class="fa fa-plug" aria-hidden="true"></i>
+                    <i class="fa fa-rss" aria-hidden="true"></i>
+                    <i class="fa fa-rss" aria-hidden="true"></i>
+                    <i class="fa fa-plug" aria-hidden="true"></i>
+                </div>
+                <!--div que se pone encima de las tarjetas para mostrar y contener el texto.
+                tambien le he puesto que una vez que se salga de el se oculte el mismo porque si no parpadea-->
+                <div class="tarjeta" id="n1" onmouseleave="ocultar('n1')">
+                    <p>Esta es la tarjeta de red normal (de la que hemos hablado anteriormente), usa un conector RJ-45 para conexiones ADSL.</p>
+                    <p>Tiene velocidades de hasta 1000MB</p>
+                </div>
+                <!--tarjeta. Le he puesto la funcion de mostrar el texto cuando haga click-->
+                <div class="cuarto"  onclick="mostrar('n1')">
+                    <img src="./images/RJ45.png" alt="Tarjeta RJ-45">
+                    <h2>Tarjeta RJ45</h2>
+                </div>
+                
+                <div class="tarjeta" id="n2"  onmouseleave="ocultar('n2')">
+                    <p>Esta tarjeta no cuenta con ningún conector, en su lugar tiene una o varias antenas que le permiten conectarse a la red de forma inalámbrica.</p>
+                    <p>Existen 2 tipos. Una para ordenadores de sobremesa (PCI) y otra para portátiles (PCIExpres)</p>
+                </div>
+                <div class="cuarto" onclick="mostrar('n2')">
+                    <img src="./images/Wifi.png" alt="Tarjeta Wi-Fi">
+                    <h2>Tarjeta Wi-Fi</h2>
+                </div>
+
+                <div class="tarjeta" id="n3"  onmouseleave="ocultar('n3')">
+                    <p>Esta simplemente es una tarjeta de red Wi-Fi que se conecta por el puerto USB.</p>
+                </div>
+                <div class="cuarto" onclick="mostrar('n3')">
+                    <img src="./images/usb.png" alt="tarjeta usb wifi">
+                    <h2>Tarjeta UBS</h2>
+                </div>
+
+                <div class="tarjeta" id="n4"  onmouseleave="ocultar('n4')">
+                    <p>Este es un tipo de tarjeta relativamente novedosa, ya que tiene un conector especial que permite captar las señales de la luz que utilizan los cables de fibra óptica.</p>
+                </div>
+                <div class="cuarto" onclick="mostrar('n4')">
+                    <img src="./images/fibra.png" alt="tarjeta de fibra">
+                    <h2>Tarjeta Óptica</h2>
+                </div>
+                <div class="clear"></div>
+
+                
+
+                <a href="#marcas">
+                    <div id="avanza" class="flechita desaparece">
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i> 
+                 </div>
+                </a>
+
+                <a href="#funcionamiento">
+                    <div id="retrocede" class="flechita desaparece">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i> 
+                 </div>
+                </a>
+
+            </section>
+            <!--SECCION Nº 4 MARCAS/TIENDA-->
+            <!--vaos a probar el snippet de w3schools acordion para añadir contenido que see muestre -->
+
+            <section id="marcas">
+                <div class="icons">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </div>
+                
+                <h2>Marcas de tarjetas de red</h2>
+                <button class="accordion"><img src="./images/tp-link.png" alt="icono tp-link"><i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                <div class="panel">
+                    <p>Fundada en 1996, TP-Link es un proveedor global de dispositivos y accesorios de redes fiables, involucrados en todos los aspectos de la vida cotidiana. La firma analista IDC clasifica a la compañía de manera sistemática como el proveedor número 1 de dispositivos Wi-Fi*, suministrando dispositivos a más de 170 países y brindando servicios a miles de millones de personas en todo el mundo.</p>
+                    <a href="https://www.tp-link.com/es/search/?q=adaptador&t=product" target="_blanck"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                </div>
+
+                <button class="accordion"><img src="./images/asus.png" alt="icono asus" ><i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                <div class="panel">
+                    <p>ASUS es una empresa multinacional establecida en Taiwán desde 1989 que diseña y fabrica hardware de informática y electrónica de consumo.</p>
+                    <p>También desarrolla productos de realidad aumentada y virtual, así como dispositivos IOT y tecnologías robóticas.</p>
+                    <a href="https://www.asusbymacman.es/tarjetas-de-red-wifi-65" target="_blanck"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                </div>
+
+                <button class="accordion"><img src="./images/d-link.png" alt="icono d-link"><i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                <div class="panel">
+                    <p>El fabricante D-Link es actualmente uno de los líderes mundiales de infraestructura de redes y comunicaciones para el sector empresarial y también de consumo. Está centrada en la fabricación de puntos de acceso, switches, switches industriales, routers, adaptadores de red, cámaras ip y routers.</p>
+                    <a href="https://la.dlink.com/la/adaptadores-de-red/" target="_blanck"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                </div>
+                <a href="#tipos">
+                    <div id="retrocede" class="flechita desaparece">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i> 
+                 </div>
+            </section>
+            <footer>
+                 <!--Favicon-->
+                <div>Iconos diseñados por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
+
+            </footer>
+        </div>
+        
+        <!--funcion scrip para el menu hamburguesa-->
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+        </script>            
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                  panel.style.display = "none";
+                } else {
+                  panel.style.display = "block";
+                }
+              });
+            }
+        </script>
+    </body>
+</html>

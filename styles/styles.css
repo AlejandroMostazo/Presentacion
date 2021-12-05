@@ -1,0 +1,587 @@
+/*estilo de la pagina */
+html {
+    scroll-behavior: smooth;
+}
+/**** Estilos generales ****/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #010014;
+    color: #E2FFFA;
+    font-size: 1.25em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  font-size: 4vw;
+}
+
+.icons i {
+  padding: 5vw;
+}
+
+a {
+  text-decoration: none;
+  color: #E2FFFA;
+}
+h1 {
+  text-align: center;
+  padding: 0;
+}
+#container {
+    width: 90%;
+    margin: auto;
+  /*  background-color: #fff; */
+}
+
+section {
+  border-bottom: solid 3px #49D6A6;
+  min-height: 100vh;
+  position: relative;
+  display: inline-block
+}
+
+.clear { /* para cotar el comportamiento de float left*/
+  clear: both;
+}
+
+/*Estilo de las flechas fija y relativas*/
+
+.flechita {
+    z-index: 3;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: #49D6A6;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flechita:hover {
+    background-color: #04AA6D;
+}
+
+#avanza {
+    position:absolute;
+    opacity: 0.4;
+    transition: 0.5s;
+    right: 1%;
+    border: solid 2px #333;
+}
+#avanza:hover {
+  transition: 0.5s;
+  opacity: 1;
+}
+
+#retrocede {
+  position:absolute;
+  opacity: 0.4;
+  transition: 0.5s;
+  border: solid 2px #333;
+  left: 1%;
+}
+#retrocede:hover {
+transition: 0.5s;
+opacity: 1;
+}
+
+/*ESTIOLO DE NAV*/
+
+.topnav {
+  /*  overflow: hidden;*/
+    z-index: 3;
+    position:sticky;
+    background-color: rgba(255, 255, 255, 0); /*hacer el bloque invisible*/
+    top: -50px; /*poner el sticky para que no se vea en la pantalla*/
+    margin-top: -56px; /*hacer que el bloque del nav no se vea en el inicio*/
+    border-bottom: solid 105px rgba(255, 255, 255, 0); /*poner un boottom grande y invisible para que se pueda hacer el hover*/
+    margin-bottom: -50px; /*quita el hueco que se crea por el border boottom*/
+    transition: 0.3s;
+  }
+ 
+  .topnav:hover { /* efecto para hacer que el nav salga desde arriva al poner el raton */
+    transition: 0.5s;
+    top: 0;
+    margin-top: 0;
+    background-color: #333;
+    border-bottom: 54px solid rgba(255, 255, 255, 0);
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+    .topnav{
+      top: 0;
+      margin: 0;
+      background-color: #333;
+      border-bottom: 54px solid #333;
+      }
+      .topnav:hover { }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .topnav.responsive {position: relative; position:sticky; border-bottom: 0px;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+/* EStilos sección hero*/
+
+#hero {
+    background-image: url("../images/background.jpg");
+    background-size: cover; /* Estira o recorta la imagen para que encaje bien*/
+    background-position: 50%; /*Recorta la imagen recortando por ambos lados dejando el medio*/
+    text-align: center;
+    position: relative;
+    color: #E2FFFA;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+/* tituo*/
+
+#logoh1 { /* contenedor donde esta el cuadrado el triangulo y el h1 para poder moverle mas libremente*/
+  position: relative;
+  margin: 37% 50% 50% 22%;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+#logo {
+  position: relative;
+    margin: 50% 50% 50% 15%;
+    width: 0; 
+    height: 0; 
+    border-right: 100px solid #04AA6D;
+    border-top: 50px solid #E2FFFA;
+    border-bottom: 50px solid #333 ;
+    }
+
+#triangulo {
+  position: relative;
+    left: 416px;
+    top: 100px;
+     width: 0;
+     height: 0;
+     border-right: 50px solid transparent;
+     border-top: 50px solid #04AA6D;
+     border-left: 50px solid #04AA6D;
+     border-bottom: 50px solid transparent ;
+}
+
+#hero h1 {
+  left: 64px;
+  top: 58px;
+  width: 240%;
+  border-left: solid 3px ;
+  background-color: #04AA6D;
+  padding: 17px;
+  position: absolute;
+  font-size: 2.5em;
+}
+
+
+
+/* boton call to action */
+
+
+#call_to_action {
+    position: absolute;
+    top: 50%;
+    left: 40vw;
+    padding: 8px; /*para que parezca un boton*/
+    background-color: #333;
+    border: solid 3px #04AA6D;
+    color: #93c5b4;
+    font-weight: 600;
+    border-radius: 15px;
+    font-size: 1.4em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform:uppercase;
+}
+
+#call_to_action:hover {
+    background-color: #04AA6D;
+    color: #E2FFFA;
+    cursor: pointer;
+}
+
+/*media query del contendio de la hero*/
+
+@media screen and (max-width:1010px){
+  #logoh1 {
+    margin: 37% 50% 50% 10%;
+  }
+  #hero h1 {
+    font-size: 1.7em;
+  }
+  #triangulo {
+    left: 342px;
+    top: 87px;
+    border-right: 40px solid transparent;
+     border-top: 40px solid #04AA6D;
+     border-left: 40px solid #04AA6D;
+     border-bottom: 39px solid transparent ;
+  }
+  #logo {
+    left: 20px;
+    top: 12px;
+      border-right: 70px solid #04AA6D;
+      border-top: 40px solid #E2FFFA;
+      border-bottom: 40px solid #333 ;
+      }
+      #call_to_action {
+        top: 50%;
+        font-size: 1em; 
+        left: 45vw;
+      }
+
+}
+
+@media screen and (max-width:720px){
+  #logoh1 {
+    margin: 20% 50% 50% 5%;
+  }
+  #hero h1 {
+    font-size: 1em;
+    width: 160%;
+  }
+  #triangulo {
+    left: 192px;
+    top: 74px;
+    border-right: 30px solid transparent;
+     border-top: 32px solid #04AA6D;
+     border-left: 31px solid #04AA6D;
+     border-bottom: 30px solid transparent ;
+  }
+  #logo {
+    left: 36px;
+    top: 20px;
+      border-right: 50px solid #04AA6D;
+      border-top:30px solid #E2FFFA;
+      border-bottom: 30px solid #333 ;
+      }
+      #call_to_action {
+        top: 50%;
+        font-size: 0.6em; 
+        left: 42vw;
+      }
+}
+
+
+/*Estilos para la section 1º introduction*/
+
+#introduction {
+    background-color: rgb(41, 39, 39);
+    box-sizing: border-box; /*hace que el pading afecte solo al interior es decir el contenedo no se hace mas grande*/
+    padding:45px;
+}
+
+.iconorj45 { /*inoco del principio*/
+  display: block;
+  margin: auto;
+  padding: 0.1vw;
+  width:50px;
+}
+
+#introduction h1{
+  margin: auto;
+  padding-bottom: 20px;
+  text-align: center;
+}
+  
+#tarjetaPCI {
+    float: left; /*Para que la imagen se quede rodeada del texto*/
+    margin-right: 20px;
+    margin-top: 20px;
+    padding-right: 40px;
+    width: 40%;
+}
+
+#icointro { /*pongo un color distinto a los iconos de la 1º seccion porque voy a usar mas la clase icons*/
+  color: #04AA6D;
+  margin: auto;
+}
+
+@media screen and (max-width:1500px){
+  #icointro i {
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+}
+}
+
+
+
+/*** Secición 2 que está dividida en 2 *//* funcionamiento ***/
+
+
+#funcionamiento {
+    display: flex;
+    align-items: center;
+    background-color: #018554;
+}
+.division { 
+    box-sizing: border-box; /* esto es para cuadrar los paddings sin que se tengamos que estar sumando o restando el width*/
+    width: 50%;
+    padding: 3%;
+    float: left;
+}
+.division h1 {
+    padding: 0;
+    margin: 0;
+}
+#derecha {
+    padding-top: 20%;
+}
+#izquierda {
+  margin-top: -5%;
+}
+div .fa-cogs {
+  font-size: 2em;
+}
+.macip {
+    width: 80%;
+    display: block;
+    position:relative;
+    margin: auto;
+    transition: 0.5s;
+}
+#mostar:hover {
+  padding-top: 17.5vw;
+}
+#texto {
+  visibility: hidden;
+  display: block;
+  margin: auto;
+  padding: 20px;
+  font-size: 1.3vw;
+  width: 72%;
+  margin-bottom: -34vw;
+}
+
+/*SECCION 3º TIPOS*/
+
+#tipos {
+    text-align: center;
+    background-color: #e3e9e8;
+    color: #333;
+}
+#icotipo {
+  justify-content: space-around; /*hace que se alinee con en el porcentaje automatico para ocupar los 4 espacios*/
+  margin: -40px;
+  font-size: 2em;
+}
+.tarjeta {
+  position: absolute;
+  background-color: #333;
+  margin: 1%;
+  width: 23%;
+  visibility: hidden;
+  min-height: 400px;
+  box-sizing: border-box;
+  padding: 2%;
+  opacity: 0.95;
+}
+
+#n2 {
+  left: 25%;
+}
+#n3 {
+  left: 50%;
+}
+#n4 {
+  left: 75%;
+}
+
+.tarjeta p {
+  color: #04AA6D;
+  font-weight: 600;
+  font-size:1.4vw;
+  margin-bottom: 0%;
+}
+.cuarto {
+    margin: 1%;
+    width: 23%;
+    box-sizing: border-box;
+    padding: 2%;
+    float: left;
+    border: solid 3px #04AA6D;
+    min-height: 400px;
+    display: flex;
+    align-items:flex-end;
+    justify-content:center;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+.cuarto img {
+    width: 100%;
+}
+.cuarto:hover {
+    background-color: rgb(190, 190, 190);
+}
+
+/* estilo se seccion 4º con acordeon*/
+
+#marcas {
+  background-color: #018554;
+  width: 100%;
+  text-align: center;
+}
+.icons .fa-shopping-cart {
+  padding: 0%;
+  padding-top: 4vw;
+}
+.accordion {
+    margin: auto;
+    display: flex;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    outline: none;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1em;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+
+  .accordion img {
+    width: 75px;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc; 
+  }
+  
+  .panel {
+    border-radius: 10px;
+    margin: auto;
+    width: 79%;
+    box-sizing: border-box;
+    padding: 0 30px 30px;
+    display: none;
+    background-color: rgb(44, 42, 53);
+    overflow: hidden;
+  }
+
+/** media querys generales pero sobre todo de las secciones 3, 4 y 5**/
+
+  
+@media screen and (max-width:860px) {
+    #funcionamiento {
+        display:table;
+    }
+    #tarjetaPCI {
+        float: none;
+        width: 100%;
+        margin: auto;
+    }
+    .desaparece {
+      display: none;
+    }
+    #derecha, #izquierda {
+        width: 100%;
+    }
+    #mostar:hover {
+      padding-top: 0;
+    }
+    .cuarto {
+        width: 47%;
+    }
+    .tarjeta {
+      width: 47%;
+    }
+    .tarjeta p {
+      font-size: 1em;
+    }
+    #n2 {
+      left: 49%;
+    }
+    #n3 {
+      bottom: 0%;
+      left: 0%;
+    }
+    #n4 {
+      bottom: 0%;
+      left: 49%;
+    }
+    .icons .fa-shopping-cart {
+      font-size: 1.5em;
+    }
+}
+
+/*media query de la seccion de tipos */
+@media screen and (max-width:600px) {
+    .cuarto {
+        width: 97%;
+        max-height: 400px;
+    } 
+    .cuarto img {
+      width: 66.5%;
+    }
+    .tarjeta {
+      width: 97%;
+  } 
+  #n2 {
+    display: block;
+    left: 0;
+    top: 500px;
+  }
+  #n3 {
+    bottom: 23.5%;
+    left: 0%;
+  }
+  #n4 {
+    bottom: 0%;
+    left: 0%;
+  }
+  .icons .fa-shopping-cart {
+    font-size: 2.2em;
+  }
+}
+
