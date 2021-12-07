@@ -128,7 +128,7 @@
                     <i class="fa fa-plug" aria-hidden="true"></i>
                 </div>
                 <!--div que se pone encima de las tarjetas para mostrar y contener el texto.
-                tambien le he puesto que una vez que se salga de el se oculte el mismo porque si no parpadea-->
+                tambien le he puesto que una vez que se salga de el se oculte el mismo porque si no, parpadea-->
                 <div class="tarjeta" id="n1" onmouseleave="ocultar('n1')">
                     <p>Esta es la tarjeta de red normal (de la que hemos hablado anteriormente), usa un conector RJ-45 para conexiones ADSL.</p>
                     <p>Tiene velocidades de hasta 1000MB</p>
@@ -212,11 +212,35 @@
                         <i class="fa fa-arrow-left" aria-hidden="true"></i> 
                  </div>
             </section>
+            
             <footer>
-                 <!--Favicon-->
-                <div>Iconos diseñados por <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
-
+                <div class="enlaces">
+                    <a href=""></a>
+                    <h4>Enlaces de la página</h4>
+                    <a href="#container">Home</a>
+                    <a href="#introduction">¿Qué es?</a>
+                    <a href="#funcionamiento">Funcionamiento</a>
+                    <a href="#tipos">Tipos</a>
+                    <a href="#marcas">Marcas</a> 
+                </div>
+                
+                <div class="enlaces" id="social">
+                    <h4>Redes sociales</h4>
+                    <a href="https://github.com/AlejandroMostazo/" target="_blanck"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/alejandro-mostazo-94a1a2184/" target="_blanck"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                </div>
+                 <!--Favicon, iconos y email-->
+                <div>
+                   <h4>Creative commons</h4>
+                   Favicons
+                    <a href="https://www.freepik.com" title="Freepik">Freepik</a>from<a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a> 
+                    <p>Iconos <a href="https://fontawesome.com/v4.7/icons/">Font awesome v4.7</a></p>
+                    <a><i class="fa fa-envelope" aria-hidden="true">  alejandromostazo39@gmail.com</i></a>
+                </div>
+                
             </footer>
+            web siter &copy; : Alejandro Mostazo 
+            <br> información de PDF: <a href="https://docs.google.com/document/d/1Vd-MZ1KQT-eSGD4B_0gnGjjm1lErY1ScHoMucU24sfQ/edit">Trabajo de periféricos (Tarjeta de red)</a>
         </div>
         
         <!--funcion scrip para el menu hamburguesa-->
@@ -229,7 +253,10 @@
                 x.className = "topnav";
               }
             }
-        </script>            
+        </script>   
+        
+        <!--funcion para el acordeon de la seccion 4º-->
+        
         <script>
             var acc = document.getElementsByClassName("accordion");
             var i;

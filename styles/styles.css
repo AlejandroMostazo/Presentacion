@@ -2,6 +2,14 @@
 html {
     scroll-behavior: smooth;
 }
+
+/*incluir una fuente descargada para los titulos*/
+
+@font-face {
+  font-family: 'TextH';
+  src: url('../founts/BreeSerif-Regular.ttf');
+}
+
 /**** Estilos generales ****/
 body {
     margin: 0;
@@ -10,6 +18,9 @@ body {
     color: #E2FFFA;
     font-size: 1.25em;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body h1, h2, h3, h4 { /*aplicar la fuente a todos los tiitulos*/
+  font-family: TextH;
 }
 
 .icons {
@@ -40,7 +51,7 @@ section {
   border-bottom: solid 3px #49D6A6;
   min-height: 100vh;
   position: relative;
-  display: inline-block
+  display: inline-block;
 }
 
 .clear { /* para cotar el comportamiento de float left*/
@@ -482,10 +493,10 @@ div .fa-cogs {
     float: left;
     border: solid 3px #04AA6D;
     min-height: 400px;
-    display: flex;
-    align-items:flex-end;
+    display: flex; /*es una forma de manejar el posicionamiendo de contenedores*/
+    align-items:flex-end; /* hace que los contenedores dentro de otro contenedor se posicionen en la derecha*/
     justify-content:center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*hace que el contenido de un contenedor se cuadre en vertical*/
     cursor: pointer;
 }
 .cuarto img {
@@ -516,8 +527,8 @@ div .fa-cogs {
     width: 80%;
     border: none;
     outline: none;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; /*hace que los contenido dentro de un contenedor se alineen de forma vertical*/
+    justify-content: space-between; /*hace que los contenedores ocupen todo el ancho y se distribuyan con el espacio correspondiente*/
     font-size: 1em;
     border-radius: 10px;
     margin-top: 5px;
@@ -531,7 +542,7 @@ div .fa-cogs {
     background-color: #ccc; 
   }
   
-  .panel {
+  .panel { /*información oculta */
     border-radius: 10px;
     margin: auto;
     width: 79%;
@@ -542,12 +553,44 @@ div .fa-cogs {
     overflow: hidden;
   }
 
-/** media querys generales pero sobre todo de las secciones 3, 4 y 5**/
+  /*FOOTER*/
+
+footer {
+  background-color: #E2FFFA;
+  color: #333;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+footer a {
+  color: #333;
+}
+footer h4 {
+  margin: 0 0 10px 0;
+}
+footer a:hover {
+  color: #04AA6D;
+  
+}
+.enlaces a {
+  display: block;
+  padding-right: 50px;
+  border-right: solid 3px #333;
+}
+.enlaces {
+  width: fit-content;
+}
+
+#social a i {
+  font-size: 1.5em;
+}
+
+/** media querys generales pero sobre todo de las secciones 3, 4**/
 
   
 @media screen and (max-width:860px) {
     #funcionamiento {
-        display:table;
+        display:table; /*hace que el contenido se distribuya de forma vertical */
     }
     #tarjetaPCI {
         float: none;
@@ -586,6 +629,10 @@ div .fa-cogs {
     .icons .fa-shopping-cart {
       font-size: 1.5em;
     }
+
+    footer {
+      font-size: 0.76em;
+    }
 }
 
 /*media query de la seccion de tipos */
@@ -615,6 +662,9 @@ div .fa-cogs {
   }
   .icons .fa-shopping-cart {
     font-size: 2.2em;
+  }
+  footer {
+    font-size: 0.57em;
   }
 }
 
