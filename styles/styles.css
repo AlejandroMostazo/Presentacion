@@ -1,9 +1,9 @@
-/*estilo de la pagina */
+/*estilo de la página */
 html {
     scroll-behavior: smooth;
 }
 
-/*incluir una fuente descargada para los titulos*/
+/*incluir una fuente descargada para los títulos*/
 
 @font-face {
   font-family: 'TextH';
@@ -19,7 +19,7 @@ body {
     font-size: 1.25em;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body h1, h2, h3, h4 { /*aplicar la fuente a todos los tiitulos*/
+body h1, h2, h3, h4 { /*aplicar la fuente a todos los títulos*/
   font-family: TextH;
 }
 
@@ -58,7 +58,7 @@ section {
   clear: both;
 }
 
-/*Estilo de las flechas fija y relativas*/
+/*Estilo de las flechas fijas y relativas*/
 
 .flechita {
     z-index: 3;
@@ -116,7 +116,7 @@ opacity: 1;
     transition: 0.3s;
   }
  
-  .topnav:hover { /* efecto para hacer que el nav salga desde arriva al poner el raton */
+  .topnav:hover { /* efecto para hacer que el nav salga desde arriba al poner el ratón */
     transition: 0.5s;
     top: 0;
     margin-top: 0;
@@ -195,7 +195,7 @@ opacity: 1;
 
 /* tituo*/
 
-#logoh1 { /* contenedor donde esta el cuadrado el triangulo y el h1 para poder moverle mas libremente*/
+#logoh1 { /* contenedor donde está el cuadrado el triangulo y el h1 para poder moverle más libremente*/
   position: relative;
   margin: 37% 50% 50% 22%;
   display: flex;
@@ -245,7 +245,7 @@ opacity: 1;
     position: absolute;
     top: 50%;
     left: 40vw;
-    padding: 8px; /*para que parezca un boton*/
+    padding: 8px; /*para que parezca un botón*/
     background-color: #333;
     border: solid 3px #04AA6D;
     color: #93c5b4;
@@ -359,11 +359,11 @@ opacity: 1;
 
 #introduction {
     background-color: rgb(41, 39, 39);
-    box-sizing: border-box; /*hace que el pading afecte solo al interior es decir el contenedo no se hace mas grande*/
+    box-sizing: border-box; /*hace que el pading afecte solo al interior es decir el contenedor no se hace más grande*/
     padding:45px;
 }
 
-.iconorj45 { /*inoco del principio*/
+.iconorj45 { /*icono del principio*/
   display: block;
   margin: auto;
   padding: 0.1vw;
@@ -384,7 +384,7 @@ opacity: 1;
     width: 40%;
 }
 
-#icointro { /*pongo un color distinto a los iconos de la 1º seccion porque voy a usar mas la clase icons*/
+#icointro { /*pongo un color distinto a los iconos de la 1º sección porque voy a usar mas la clase icons*/
   color: #04AA6D;
   margin: auto;
   padding: 0;
@@ -453,7 +453,7 @@ div .fa-cogs {
     color: #333;
 }
 #icotipo {
-  justify-content: space-around; /*hace que se alinee con en el porcentaje automatico para ocupar los 4 espacios*/
+  justify-content: space-around; /*hace que se alineen con en el porcentaje automatico para ocupar los 4 espacios*/
   margin: -40px;
   font-size: 2em;
 }
@@ -506,7 +506,7 @@ div .fa-cogs {
     background-color: rgb(190, 190, 190);
 }
 
-/* estilo se seccion 4º con acordeon*/
+/* estilo se sección 4º con acordeón*/
 
 #marcas {
   background-color: #018554;
@@ -635,7 +635,7 @@ footer a:hover {
     }
 }
 
-/*media query de la seccion de tipos */
+/*media query de la sección de tipos */
 @media screen and (max-width:600px) {
     .cuarto {
         width: 97%;
